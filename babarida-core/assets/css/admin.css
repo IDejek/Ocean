@@ -1,0 +1,316 @@
+/**
+ * Babarida Core - Admin Dashboard Styles
+ * Luxury enterprise styling for WP Admin
+ */
+
+:root {
+    --babarida-primary: #00BFFF;
+    --babarida-secondary: #1E90FF;
+    --babarida-accent: #FACC15;
+    --babarida-dark: #0F172A;
+    --babarida-gray-100: #F1F5F9;
+    --babarida-gray-500: #64748B;
+    --babarida-radius: 8px;
+}
+
+/* ─── Admin Menu Branding ─────────────────── */
+#toplevel_page_babarida-dashboard .wp-menu-image:before {
+    content: "\f227";
+    font-size: 20px !important;
+    padding-top: 4px;
+}
+
+#toplevel_page_babarida-dashboard .wp-menu-image img {
+    display: none;
+}
+
+/* ─── Dashboard Widgets ──────────────────── */
+.babarida-widget-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.babarida-stat-card {
+    padding: 20px;
+    border-radius: var(--babarida-radius);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.babarida-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ─── Custom Admin Page Wrapper ──────────── */
+.babarida-admin-wrap {
+    max-width: 1400px;
+    margin: 20px 20px 0 0;
+    padding: 24px;
+    background: #fff;
+    border-radius: var(--babarida-radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.babarida-admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--babarida-gray-100);
+}
+
+.babarida-admin-header h1 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--babarida-dark);
+    margin: 0;
+}
+
+/* ─── Status Badges ──────────────────────── */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+.status-pending { background: #FEF3C7; color: #92400E; }
+.status-confirmed { background: #DBEAFE; color: #1E40AF; }
+.status-paid { background: #D1FAE5; color: #065F46; }
+.status-checked-in { background: #E0E7FF; color: #3730A3; }
+.status-completed { background: #D1FAE5; color: #065F46; }
+.status-cancelled { background: #FEE2E2; color: #991B1B; }
+.status-refunded { background: #F3E8FF; color: #6B21A8; }
+
+/* ─── Admin Tables ───────────────────────── */
+.wp-list-table .column-babarida_status {
+    width: 120px;
+}
+
+.wp-list-table .column-babarida_price {
+    width: 120px;
+    text-align: right;
+}
+
+.wp-list-table .column-babarida_customer {
+    width: 180px;
+}
+
+.babarida-table-row:hover {
+    background-color: #f8fafc !important;
+}
+
+/* ─── Forms & Inputs ─────────────────────── */
+.babarida-form-group {
+    margin-bottom: 20px;
+}
+
+.babarida-form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--babarida-dark);
+    margin-bottom: 6px;
+}
+
+.babarida-form-control {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: var(--babarida-radius);
+    font-size: 14px;
+    color: var(--babarida-dark);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.babarida-form-control:focus {
+    outline: none;
+    border-color: var(--babarida-primary);
+    box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.15);
+}
+
+.babarida-form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* ─── Buttons ────────────────────────────── */
+.babarida-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: var(--babarida-radius);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    text-decoration: none;
+}
+
+.babarida-btn-primary {
+    background: var(--babarida-primary);
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 191, 255, 0.3);
+}
+
+.babarida-btn-primary:hover {
+    background: var(--babarida-secondary);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 191, 255, 0.4);
+}
+
+.babarida-btn-outline {
+    background: transparent;
+    color: var(--babarida-primary);
+    border: 1px solid var(--babarida-primary);
+}
+
+.babarida-btn-outline:hover {
+    background: rgba(0, 191, 255, 0.05);
+}
+
+.babarida-btn-danger {
+    background: #EF4444;
+    color: #fff;
+}
+
+.babarida-btn-danger:hover {
+    background: #DC2626;
+    color: #fff;
+}
+
+/* ─── Cards & Grid Layouts ───────────────── */
+.babarida-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--babarida-radius);
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.babarida-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--babarida-gray-100);
+}
+
+.babarida-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--babarida-dark);
+    margin: 0;
+}
+
+.babarida-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 1024px) {
+    .babarida-grid-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.babarida-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 1200px) {
+    .babarida-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ─── System Health Monitor ──────────────── */
+.babarida-health-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--babarida-gray-100);
+}
+
+.babarida-health-item:last-child {
+    border-bottom: none;
+}
+
+.babarida-health-label {
+    font-weight: 500;
+    color: var(--babarida-dark);
+}
+
+.babarida-health-value {
+    font-weight: 600;
+}
+
+.babarida-health-good { color: #16a34a; }
+.babarida-health-warning { color: #ca8a04; }
+.babarida-health-critical { color: #dc2626; }
+
+/* ─── Notices ────────────────────────────── */
+.babarida-notice {
+    padding: 16px 20px;
+    border-radius: var(--babarida-radius);
+    margin-bottom: 20px;
+    border-left: 4px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.babarida-notice-success {
+    background: #f0fdf4;
+    border-left-color: #22c55e;
+    color: #166534;
+}
+
+.babarida-notice-error {
+    background: #fef2f2;
+    border-left-color: #ef4444;
+    color: #991b1b;
+}
+
+.babarida-notice-info {
+    background: #eff6ff;
+    border-left-color: #3b82f6;
+    color: #1e40af;
+}
+
+/* ─── Empty States ───────────────────────── */
+.babarida-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--babarida-gray-500);
+}
+
+.babarida-empty-state svg {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    opacity: 0.3;
+}
+
+.babarida-empty-state h3 {
+    font-size: 18px;
+    color: var(--babarida-dark);
+    margin-bottom: 8px;
+}
