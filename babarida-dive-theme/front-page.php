@@ -113,9 +113,9 @@ get_header();
             <div class="welcome-services" data-animate="fade-up" data-delay="200">
                 <div class="service-cards-grid">
                     <?php
-                    $services = array(
-                        array('icon' 'ship',     'label' => 'Liveaboard Cruises'),
-                        array('icon' => 'compass',  'label' => 'Dive Safaris'),
+                     $services = array(
+    array('icon' => 'ship',     'label' => 'Liveaboard Cruises'), // <- TAMBAHKAN =>
+    array('icon' => 'compass',  'label' => 'Dive Safaris'),
                         array('icon' => 'waves',    'label' => 'Water Sports'),
                         array('icon' => 'sun',      'label' => 'Day Trips'),
                         array('icon' => 'award',    'label' => 'SSI Courses'),
