@@ -1,0 +1,177 @@
+/**
+ * Babarida Dive Center - Custom Login Page Styles
+ */
+
+.login {
+    background: linear-gradient(135deg, #0F172A 0%, #0c2340 50%, #0F172A 100%) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.login h1 a {
+    background-image: url('../images/babarida-logo-white.svg') !important;
+    background-size: contain !important;
+    background-position: center center !important;
+    width: 200px !important;
+    height: 60px !important;
+    margin: 0 auto 20px !important;
+}
+
+#loginform {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 16px !important;
+    padding: 40px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login form .input,
+.login input[type="text"],
+.login input[type="password"] {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 8px !important;
+    color: #FFFFFF !important;
+    padding: 14px 16px !important;
+    font-size: 14px !important;
+    transition: all 0.3s ease !important;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+    border-color: #00BFFF !important;
+    box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.2) !important;
+    outline: none !important;
+}
+
+.login input[type="text"]::placeholder,
+.login input[type="password"]::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.login label {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    margin-bottom: 8px !important;
+    display: block;
+}
+
+.login #wp-submit {
+    background: linear-gradient(135deg, #00BFFF, #1E90FF) !important;
+    border: none !important;
+    border-radius: 50px !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    text-shadow: none !important;
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.4) !important;
+    height: 50px !important;
+    padding: 0 32px !important;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease !important;
+}
+
+.login #wp-submit:hover {
+    background: linear-gradient(135deg, #1E90FF, #00BFFF) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 191, 255, 0.5) !important;
+}
+
+.login #wp-submit:active {
+    transform: translateY(0);
+}
+
+.login #nav,
+.login #backtoblog {
+    text-align: center !important;
+    padding: 16px 0 !important;
+}
+
+.login #nav a,
+.login #backtoblog a {
+    color: rgba(255, 255, 255, 0.6) !important;
+    transition: color 0.3s ease !important;
+}
+
+.login #nav a:hover,
+.login #backtoblog a:hover {
+    color: #00BFFF !important;
+}
+
+.login .message,
+.login #login_error {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-left: 4px solid #00BFFF !important;
+    color: #FFFFFF !important;
+    border-radius: 8px !important;
+    padding: 16px 20px !important;
+    backdrop-filter: blur(10px) !important;
+    margin-bottom: 20px !important;
+}
+
+.login .forgetmenot {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px !important;
+}
+
+.login .forgetmenot label {
+    margin-bottom: 0 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.login .forgetmenot input[type="checkbox"] {
+    accent-color: #00BFFF;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 !important;
+}
+
+.login .dashicons-visibility {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.login form .forgetmenot {
+    float: none !important;
+}
+
+.login form .submit {
+    float: none !important;
+    margin-bottom: 16px !important;
+}
+
+.login .login-language-switcher {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.login .login-language-switcher select {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    color: #fff;
+    padding: 8px;
+}
+
+#login {
+    width: 100% !important;
+    max-width: 440px;
+    padding: 0 20px;
+}
+
+@media (max-width: 480px) {
+    #loginform {
+        padding: 30px 24px !important;
+    }
+}
